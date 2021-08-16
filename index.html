@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="index.css">
+        <script src="index.js" defer></script>
     </head>
     <body>
         <header>
@@ -11,22 +12,25 @@
     <br>
     <br>
 
-    <form action="https://cataas.com" method="GET" class="helloKitty">
+    <form class="kittyForm">
     <div class="helloKitty">
         <div class="catTags">
-            <label> SELECT A THEME: <input type="text" name="catTheme" id="catTheme"> </label>
+            <label> SELECT A THEME: </label>
+            <input type="text" name="tag" id="tag"> 
         </div>
         <br>
         <br>
         <br>
         <div class="catText">
-            <label> ADD A SPECIAL MESSAGE: <input type="text" name="specialMessage" id="specialMessage"> </label>
+            <label> ADD A SPECIAL MESSAGE: </label>
+            <input type="text" name="text" id="text"> 
         </div>
         <br>
         <br>
         <br>
         <div class="catColor">
-            <label> SELECT A COLOR FOR YOUR MESSAGE: <input type="text" name="messageColor" id="messageColor"> </label>
+            <label> SELECT A COLOR FOR YOUR MESSAGE: </label>
+            <input type="text" name="color" id="color"> 
         </div>
         <br>
         <br>
@@ -37,6 +41,9 @@
         
     </div>
   </form>
+  <div>
+      <img src="" class="catPic">
+  </div>
     </body>
 </html>
 

@@ -1,24 +1,28 @@
-// /api/tags => Will return all tags. Use to poulate dropdown.
 
-// /cat/:tag/says/:text?color=:color=> I think this will return a random cat with a :tag, :text, and :color selected. 
+//Notes from instructor: You need an event listener on submit. listener for the form inside that. Take out the values from the form. Then fetch
+  
+//1. event listener for submit - stop the default and create var for input value. then fetch for those key/values. once the data is returned display it.
+// use this three times to get input values: const newEmoji = evt.target['emoji'].value
+//create a div for an image that is empty then change the source 
+//need two more event listeners
+const kittyForm = document.querySelector(".kittyForm")
 
-const formData = {
-    //form.helloKitty
-  };
-  
-  const configurationObject = {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      "Accept": "application/json"
-    },
-    body: JSON.stringify(formData)
-  };
-  
-  fetch("https://cataas.com/cat/:tag/says/:text?color=:color", configurationObject)
-    .then(function(response) {
-      return response.json();
-    })
+kittyForm.addEventListener('submit', (evt) => {
+    evt.preventDefault()
+
+    const catTag = evt.target['tag'].value
+    const catText = evt.target['text'].value
+    const catColor = evt.target['color'].value
+
+
+    fetch(`https://cataas.com/cat/${catTag}/says/${catText}?color=${catColor}`)
     .then(function(object) {
-      console.log(object);
-    }); 
+        const catPic = document.querySelector(".catPic")
+        catPic.img.src = object.url
+    });  
+    
+
+})
+
+
+    
