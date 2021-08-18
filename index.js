@@ -5,6 +5,8 @@
 // use this three times to get input values: const newEmoji = evt.target['emoji'].value
 //create a div for an image that is empty then change the source 
 //need two more event listeners
+//idea for second event listener - change cursor to pointer when hovering over cat pic.
+//idea for third event listener - click the image (poke the cat) and hear a cat meow
 const kittyForm = document.querySelector(".kittyForm")
 
 kittyForm.addEventListener('submit', (evt) => {
@@ -19,6 +21,7 @@ kittyForm.addEventListener('submit', (evt) => {
     .then(function(object) {
         const catPic = document.querySelector(".catPic")
         catPic.img.src = object.url
+        console.log(object)
     });  
     
 
