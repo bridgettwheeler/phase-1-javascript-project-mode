@@ -30,6 +30,14 @@ div.catTags {
     font-weight: 100;
 }
 
+select {
+    color: rgb(180, 85, 199);
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: 100;
+
+}
+
 div.catText {
     margin: auto;
     width: 50%;
@@ -75,3 +83,6 @@ div.submitButton {
     text-align: center;
 }
 
+div.imageArea {
+    text-align: center;
+}
