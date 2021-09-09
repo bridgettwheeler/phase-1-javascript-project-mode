@@ -1,5 +1,7 @@
+//https://cataas.com/#/
 
 const kittyForm = document.querySelector(".kittyForm");
+
 
 kittyForm.addEventListener('submit', (evt) => {
     evt.preventDefault()
@@ -12,12 +14,12 @@ kittyForm.addEventListener('submit', (evt) => {
     fetch(`https://cataas.com/cat/${catTag}/says/${catText}?color=${catColor}`)
     .then(function(object) {
         document.querySelector("#catPic").src = object.url
-        
+        para = document.querySelector("#pokeInstructions")
+        const node = document.createTextNode("Now, poke the kitty with your finger and listen to it's response!");
+        para.appendChild(node)  
     });  
 
-    para = document.querySelector("#pokeInstructions")
-    const node = document.createTextNode("Now, poke the kitty with your finger and listen to it's response!");
-    para.appendChild(node)  
+    
 
 })
 
@@ -35,3 +37,16 @@ imageArea.addEventListener('click', (evt) => {
 
 
     
+// add event listener to p tag when clicked add exclamation point to innerText
+
+
+// select the p tag
+// add event listener
+// define callback function to add exclamation point
+
+// par= document.querySelector("#pokeInstructions")
+// txt= document.querySelector("#pokeInstructions").textContent
+// par.addEventListener("click", (event) => { 
+//     exclamation= document.createTextNode("!")
+//     txt.appendChild(exclamation)
+// })
